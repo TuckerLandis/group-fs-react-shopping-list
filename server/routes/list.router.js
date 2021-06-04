@@ -20,6 +20,8 @@ router.post('/', (req, res) => {
             console.log(`Error adding ${queryText} to the database`, err);
             res.sendStatus(500);
         })
+})
+
 // DELETE
 router.delete('/:id', (req, res) => {
     // hold id for sanitizing
