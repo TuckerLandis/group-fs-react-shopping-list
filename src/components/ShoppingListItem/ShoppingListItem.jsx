@@ -8,7 +8,9 @@ function ShoppingListItem (props) {
             <p>  </p>
             <p>{props.quantity} {props.unit}</p>
             <p>  </p>
-            <button onClick={props.purchaseItem}> Purchase </button> <button onClick={props.deleteItem}> Remove </button> 
+            <button onClick={props.purchaseItem}> Purchase </button> 
+            <p>  </p>
+            <button onClick={props.deleteItem}> Remove </button> 
         </div>
     )
 }
