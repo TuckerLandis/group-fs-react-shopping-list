@@ -4,7 +4,6 @@ import axios from 'axios';
 import Header from '../Header/Header.jsx';
 import './App.css';
 import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
-
 import './App.css';
 
 
@@ -28,6 +27,7 @@ function App() {
     } // end getShoppingList const
 
 
+<<<<<<< HEAD
     // ⬇ Function to add a new item to the list
     // ⬇ Will be called from the ShoppingForm
     const addToList = (newFoodItem) => {
@@ -42,6 +42,9 @@ function App() {
         })
     }
     const purchaseItem = () => {
+=======
+    const purchaseItem = (itemId) => {
+>>>>>>> master
 
         Axios.put(`/list/${itemId}`)
         .then(response => {

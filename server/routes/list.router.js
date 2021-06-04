@@ -24,11 +24,11 @@ router.post('/', (req, res) => {
 // GET
 
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "list" OR BY "name" DESC;`;
+    const queryText = `SELECT * FROM "list" ORDER BY "name" DESC;`;
     pool.query(queryText)
     .then(response => {
         console.log('Things we got from db: ', response.rows);
-        res.send(result.rows);
+        res.send(response.rows);
     }) // end .then
     .catch(error => {
         console.log('serverside error getting grocery list items from db: ', error);
