@@ -4,6 +4,7 @@ import Header from '../Header/Header.jsx'
 import './App.css';
 
 // ⬇ Function to add a new item to the list
+// ⬇ Will be called from the ShoppingForm
 const addToList = (newFoodItem) => {
     axios.post('/list', {newFoodItem})
     .then( response => {

@@ -9,8 +9,8 @@ To Dos:
         
 
 - [ ] Full stack POST route
-    - [ ] AXIOS in react component
-    - [ ] server route
+    - [ x ] AXIOS in react component
+    - [ x ] server route
     - [ ] DOM readout
         - [ ] Form:
             - [ ] Item input
