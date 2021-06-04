@@ -1,6 +1,7 @@
 import ShoppingListItem from '../ShoppingListItem/ShoppingListItem';
 
 function ShoppingList({shoppingList, removeItem, purchaseItem}) {
+    // console.log('Props inside ShoppingList', );
     return (
         <>
             

@@ -13,8 +13,8 @@ function ShoppingListItem(props) {
         props.removeItem(id);
     }
 
-
-    const ifPurchased = () => {
+    
+    const ifPurchased = (props) => {
         if (!props.purchased) {
             return (<>
                     <button onClick={() => purchaseHandler(props.id)}> Purchase </button>
@@ -36,7 +36,7 @@ function ShoppingListItem(props) {
             <p>  </p>
             <p>{props.quantity} {props.unit}</p>
             <p>  </p>
-            {ifPurchased()}
+            {ifPurchased(props)}
         </div>
     )
 }
