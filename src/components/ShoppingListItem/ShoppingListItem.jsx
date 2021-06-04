@@ -6,7 +6,6 @@ function ShoppingListItem(props) {
     const purchaseHandler = (id) => {
         console.log('Clicked Purchase!');
         props.purchaseItem(id);
-        
     }
 
     const removeHandler = (id) => {
