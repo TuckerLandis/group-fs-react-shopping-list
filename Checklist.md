@@ -20,7 +20,7 @@ To Dos:
 
 - [ ] Full stack PUT route
     - [ ] AXIOS in react component
-    - [ ] server route
+    - [x] server route
     - [ ] marks items as purchased
         - [ ] Conditional rendering: remove purchased and delete buttons, display "Purchased" somehow
 
