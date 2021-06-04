@@ -6,7 +6,6 @@ import './App.css';
 import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
 
 
-
 function App() {
     const [shoppingList, setShoppingList] = useState([]);
 
@@ -74,6 +73,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
+                <ShoppingList shoppingList={shoppingList}/>
                 <ShoppingForm addToList={addToList} />
             </main>
         </div>

@@ -34,7 +34,7 @@ To Dos:
 
 - [ ] Components
     - [ ] App: houses axios
-    - [ ] Header: Is the header
+    - [x] Header: Is the header
     - [ ] ResetClear
     - [ ] ShoppingForm
     - [ ] ShoppingList
