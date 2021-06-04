@@ -1,6 +1,21 @@
 import './ShoppingListItem.css'
-function ShoppingListItem (props) {
+function ShoppingListItem(props) {
 
+
+    const ifPurchased = (props) => {
+        if (!props.purchased) {
+            return (<>
+                    <button onClick={props.purchaseItem}> Purchase </button>
+                        <p>  </p>
+                     <button onClick={props.deleteItem}> Remove </button>
+                 </>
+            )
+        } else {
+            return (
+                <p> Purchased </p>
+            )
+        }
+    }
 
     return (
         <div className="ShoppingListItem">
@@ -8,9 +23,7 @@ function ShoppingListItem (props) {
             <p>  </p>
             <p>{props.quantity} {props.unit}</p>
             <p>  </p>
-            <button onClick={props.purchaseItem}> Purchase </button> 
-            <p>  </p>
-            <button onClick={props.deleteItem}> Remove </button> 
+            {ifPurchased(props)}
         </div>
     )
 }
