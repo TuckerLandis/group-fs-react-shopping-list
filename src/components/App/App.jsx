@@ -1,5 +1,5 @@
 import React from 'react';
-
+import axios from 'axios';
 import Header from '../Header/Header.jsx'
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
 
     // remove an item from the shopping list
     const removeItem = (itemId) => {
-        console.log('Removing item:', id);
+        console.log('Removing item:', itemId);
         // axios DELETE request
         axios.delete(`/list/${itemId}`)
             .then(response => {
@@ -25,7 +25,7 @@ function App() {
             });
     }
 
-    
+
     return (
         <div className="App">
             <Header />
