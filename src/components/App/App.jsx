@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../Header/Header.jsx'
 import ResetClear from '../ResetClear/ResetClear';
+import './App.css';
+
 
 function App() {
 
@@ -25,7 +27,7 @@ function App() {
     } // end getShoppingList const
 
 
-    const purchaseItem = () => {
+    const purchaseItem = (itemId) => {
 
         Axios.put(`/list/${itemId}`)
         .then(response => {
