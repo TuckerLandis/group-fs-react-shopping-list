@@ -28,7 +28,7 @@ function ShoppingListItem(props) {
             )
         }
     }
-
+    // console.log('Checking props purchased', props.purchased);
     // console.log('Props in ShoppingListItem are:', props);
     return (
         <div className="ShoppingListItem">
