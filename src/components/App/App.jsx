@@ -1,26 +1,28 @@
 import React from 'react';
 import axios from 'axios';
-import Header from '../Header/Header.jsx'
+import Header from '../Header/Header.jsx';
 import './App.css';
+import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
 
-// ⬇ Function to add a new item to the list
-// ⬇ Will be called from the ShoppingForm
-const addToList = (newFoodItem) => {
-    axios.post('/list', {newFoodItem})
-    .then( response => {
-    // ⬇ Calls function to get the updated shopping list from the database
-    getShoppingList();
-    })
-    .catch( err => {
-        console.log('error adding item', err)
-    })
-}
+
 
 function App() {
 
 
 
-
+    // ⬇ Function to add a new item to the list
+    // ⬇ Will be called from the ShoppingForm
+    const addToList = (newFoodItem) => {
+        axios.post('/list', {newFoodItem})
+        .then( response => {
+        // ⬇ Calls function to get the updated shopping list from the database
+        getShoppingList();
+        //TODO - Clear Inputs
+        })
+        .catch( err => {
+        console.log('error adding item', err)
+        })
+    }
 
     // remove an item from the shopping list
     const removeItem = (itemId) => {
@@ -43,6 +45,8 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
+                <h2>Add A Item</h2>
+                <ShoppingForm addToList={addToList} />
             </main>
         </div>
     );
