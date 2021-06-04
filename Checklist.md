@@ -25,7 +25,7 @@ To Dos:
         - [ ] Conditional rendering: remove purchased and delete buttons, display "Purchased" somehow
 
 - [ ] Full stack DELETE route
-    - [ ] AXIOS in react component
+    - [x] AXIOS in react component
     - [x] server route
     - [ ] Clear Button: Removes all items from the list, DOM, databse, --> net zero!
 

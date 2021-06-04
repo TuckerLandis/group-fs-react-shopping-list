@@ -76,4 +76,18 @@ router.put('/:id', (req, res) => {
     })
 })
 
+// PUT for resetting items to false
+router.put('/reset/:id', (req, res) => {
+    console.log('got to PUT for resetting all items');
+    const queryText = `UPDATE "list" SET "purchased"='false' WHERE "list".id = $1;`;
+
+    pool.query(queryText, [req.params.id])
+    .then(result => {
+        res.sendStatus(200)
+    }).catch(error => {
+        console.log('error updating all items', error);
+        res.sendStatus(500)
+    })
+})
+
 module.exports = router;
