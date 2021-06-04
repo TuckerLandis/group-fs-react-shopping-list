@@ -1,5 +1,6 @@
 .ShoppingListItem {
-    border: 1px solid black;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 2px skyblue;
     border-radius: 25px;
     display: inline-block;
     text-align: center;
