@@ -1,7 +1,13 @@
-function ResetClear () {
+function ResetClear ({shoppingList}) {
 
+    const handleClear = () => {
+        console.log('Clicked!');
+    }
     return (
-        <h3>Testing ResetClear</h3>
+        <>
+            <button>Reset</button>
+            <button onClick={handleClear}>Clear List</button>
+        </>
     )
 }
 
