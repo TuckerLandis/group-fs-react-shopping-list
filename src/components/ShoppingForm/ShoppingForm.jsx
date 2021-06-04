@@ -43,7 +43,7 @@ function ShoppingForm({addToList}){
                 onChange={(event) => setItemUnit(event.target.value)}
                 value={itemUnit}
             />
-            <button type="submit">Save</button>
+            <button className="btn btn-success" type="submit">Save</button>
         </form>
         </>
     )
