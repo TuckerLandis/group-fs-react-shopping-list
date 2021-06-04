@@ -45,7 +45,6 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
-                <h2>Add A Item</h2>
                 <ShoppingForm addToList={addToList} />
             </main>
         </div>

@@ -24,6 +24,7 @@ function ShoppingForm(addToList){
 
     return(
         <>
+        <h2>Add A Item</h2>
         <form obSubmit={handleSave}>
             <label>Item</label>
             <input 
@@ -40,6 +41,7 @@ function ShoppingForm(addToList){
                 onChange={(event) => setItemUnit(event.target.value)}
                 value={itemUnit}
             />
+            <button type="submit">Save</button>
         </form>
         </>
     )
