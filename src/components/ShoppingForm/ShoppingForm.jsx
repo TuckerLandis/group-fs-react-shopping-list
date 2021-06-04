@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
 
-function ShoppingForm(addToList){
+function ShoppingForm({addToList}){
 
     const [shoppingItem, setShoppingItem] = useState('');
     const [itemQuantity, setItemQuantity] = useState('');
@@ -29,7 +29,7 @@ function ShoppingForm(addToList){
         <form onSubmit={handleSave}>
             <label>Item</label>
             <input 
-                onChange={(event) => newShoppingItem(event.target.value)}
+                onChange={(event) => setShoppingItem(event.target.value)}
                 value={shoppingItem}
             />
             <label>Quantity</label>

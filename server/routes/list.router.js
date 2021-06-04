@@ -8,8 +8,14 @@ const pool = require('../modules/pool.js');
 router.post('/', (req, res) => {
     // ⬇ Sets up what we want from the user
     const item = req.body;
+    console.log(item)
+    console.log(item.name)
+    console.log(item.quantity)
+    console.log(item.unit)
+    console.log(item.newFoodItem)
     // ⬇ Tells sql WHAT and WHERE we'd like to do AND sanitizes 
-    const queryText = `INSERT INTO list ("name", "quantity", "unit") VALUES ($1, $2, $3)`;
+    const queryText = `INSERT INTO list (name, quantity, unit)
+                        VALUES ($1, $2, $3)`;
     // ⬇ The $1, $2 will get substituted with the values from the array
     pool.query(queryText, [item.name, item.quantity, item.unit])
         .then( result => {

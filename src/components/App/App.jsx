@@ -29,7 +29,7 @@ function App() {
 // ⬇ Function to add a new item to the list
     // ⬇ Will be called from the ShoppingForm
     const addToList = (newFoodItem) => {
-        axios.post('/list', {newFoodItem})
+        axios.post('/list', newFoodItem)
         .then( response => {
         // ⬇ Calls function to get the updated shopping list from the database
         getShoppingList();
