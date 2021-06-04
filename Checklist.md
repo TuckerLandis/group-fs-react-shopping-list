@@ -8,9 +8,9 @@ To Dos:
         - [ ] Remove button: attach to DELETE route later
         
 
-- [ ] Full stack POST route
-    - [ ] AXIOS in react component
-    - [ ] server route
+- [ x ] Full stack POST route
+    - [ x ] AXIOS in react component
+    - [ x ] server route
     - [ ] DOM readout
         - [ ] Form:
             - [ ] Item input
