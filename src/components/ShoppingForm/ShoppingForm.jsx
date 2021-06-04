@@ -22,6 +22,9 @@ function ShoppingForm({addToList}){
 
         // ⬇ Call the addToList function from App.jsx and passing it the newFoodItem
         addToList(newFoodItem);
+        setShoppingItem('');
+        setItemQuantity('');
+        setItemUnit('');
     }
 
     return(
