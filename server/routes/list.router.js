@@ -18,7 +18,9 @@ router.get('/', (req, res) => {
         res.sendStatus(500);
     }) // end .catch, end pool.query
 }) // end router.get
+
 // DELETE
+
 router.delete('/:id', (req, res) => {
     // hold id for sanitizing
     const id = req.params.id;
