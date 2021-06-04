@@ -26,7 +26,7 @@ function App() {
     } // end getShoppingList const
 
 
-    const purchaseItem = () => {
+    const purchaseItem = (itemId) => {
 
         Axios.put(`/list/${itemId}`)
         .then(response => {
