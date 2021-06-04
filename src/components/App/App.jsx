@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../Header/Header.jsx'
+
 import './App.css';
 
 function App() {
+
 
     useEffect(() => {
         console.log('in useEffect');
@@ -22,6 +25,18 @@ function App() {
         }) // end .catch, end axios.get
     } // end getShoppingList const
 
+
+    const purchaseItem = () => {
+
+        Axios.put(`/list/${itemId}`)
+        .then(response => {
+            //get list
+        }).catch(error => {
+            console.log('error purchasing item ', error);
+        })
+    } 
+
+
     // remove an item from the shopping list
     const removeItem = (itemId) => {
         console.log('Removing item:', itemId);
@@ -36,6 +51,7 @@ function App() {
                 console.log(error);
             });
     }
+
 
 
     return (
