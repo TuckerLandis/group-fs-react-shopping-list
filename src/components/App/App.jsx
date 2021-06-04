@@ -89,11 +89,7 @@ function App() {
                 <ShoppingForm addToList={addToList} />
                 <h2>Shopping List</h2>
                 <ResetClear removeItem={removeItem} shoppingList={shoppingList} resetPurchased={resetPurchased}/>
-<<<<<<< HEAD
                 <ShoppingList shoppingList={shoppingList} removeItem={removeItem} purchaseItem={purchaseItem}/>
-=======
-                <ShoppingList shoppingList={shoppingList} purchaseItem={purchaseItem}/>
->>>>>>> master
             </main>
         </div>
     );
