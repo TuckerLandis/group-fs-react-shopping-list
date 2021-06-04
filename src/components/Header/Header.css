@@ -2,4 +2,6 @@
   background-color: silver;
   text-align: center;
   padding: 0.25em;
+  border-bottom: 2px solid black;
+  box-shadow: 2px 2px 2px 2px skyblue;
 }
