@@ -73,7 +73,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
-                <ShoppingList />
+                <ShoppingList shoppingList={shoppingList}/>
                 <ShoppingForm addToList={addToList} />
             </main>
         </div>
