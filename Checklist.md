@@ -1,7 +1,7 @@
 To Dos:
 - [ ] Full stack GET route
-    - [ ] AXIOS in react component
-    - [ ] server route
+    - [x] AXIOS in react component
+    - [x] server route
     - [ ] Display list on DOM (alphabetically to start)
         - [ ] Buy button: attach to PUT route later for purchased
             - [ ] When clicked, this item needs to go to the bottom of the shopping list
