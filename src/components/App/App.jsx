@@ -4,11 +4,11 @@ import axios from 'axios';
 import Header from '../Header/Header.jsx';
 import './App.css';
 import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
-import './App.css';
-import ShoppingList from '../ShoppingList/ShoppingList';
 
 
 function App() {
+    const [shoppingList, setShoppingList] = useState([]);
+
 
     useEffect(() => {
         console.log('in useEffect');
@@ -67,7 +67,7 @@ function App() {
     }
 
 
-
+    
     return (
         <div className="App">
             <Header />
