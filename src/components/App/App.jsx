@@ -46,7 +46,7 @@ function App() {
     }
 
     const purchaseItem = (itemId) => {
-        Axios.put(`/list/${itemId}`)
+        axios.put(`/list/${itemId}`)
         .then(response => {
             getShoppingList();
         }).catch(error => {
