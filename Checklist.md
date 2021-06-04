@@ -8,9 +8,9 @@ To Dos:
         - [ ] Remove button: attach to DELETE route later
         
 
-- [ ] Full stack POST route
-    - [ ] AXIOS in react component
-    - [ ] server route
+- [ x ] Full stack POST route
+    - [ x ] AXIOS in react component
+    - [ x ] server route
     - [ ] DOM readout
         - [ ] Form:
             - [ ] Item input
@@ -19,8 +19,8 @@ To Dos:
             - [ ] Add to list button
 
 - [ ] Full stack PUT route
-    - [ ] AXIOS in react component
-    - [ ] server route
+    - [  ] AXIOS in react component
+    - [  ] server route
     - [ ] marks items as purchased
         - [ ] Conditional rendering: remove purchased and delete buttons, display "Purchased" somehow
 

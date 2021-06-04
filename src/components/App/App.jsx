@@ -1,12 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../Header/Header';
+import Header from '../Header/Header.jsx';
+import './App.css';
+import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
 import './App.css';
 import ShoppingList from '../ShoppingList/ShoppingList';
 
-function App() {
 
+function App() {
 
     useEffect(() => {
         console.log('in useEffect');
@@ -25,9 +27,21 @@ function App() {
         }) // end .catch, end axios.get
     } // end getShoppingList const
 
+// ⬇ Function to add a new item to the list
+    // ⬇ Will be called from the ShoppingForm
+    const addToList = (newFoodItem) => {
+        axios.post('/list', newFoodItem)
+        .then( response => {
+        // ⬇ Calls function to get the updated shopping list from the database
+        getShoppingList();
+        //TODO - Clear Inputs for setShoppingItem, setShoppingQuantity, setShoppingUnit
+        })
+        .catch( err => {
+        console.log('error adding item', err)
+        })
+    }
 
     const purchaseItem = (itemId) => {
-
         Axios.put(`/list/${itemId}`)
         .then(response => {
             //get list
@@ -60,6 +74,7 @@ function App() {
             <main>
                 <p>Under Construction...</p>
                 <ShoppingList />
+                <ShoppingForm addToList={addToList} />
             </main>
         </div>
     );
