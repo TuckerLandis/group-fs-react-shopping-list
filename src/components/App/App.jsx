@@ -1,15 +1,29 @@
-import React from 'react';
 
-
-import Header from '../Header/Header.jsx';
-
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
 import './App.css';
 
-
 function App() {
+
+
+    useEffect(() => {
+        console.log('in useEffect');
+        getShoppingList();
+    }, []); // end useEffect
+
+    // GET
+    const getShoppingList = () => {
+        axios.get('/list')
+        .then(response => {
+            console.log('response data: ', response.data);
+            setShoppingList(response.data);
+        }) // end .then
+        .catch(error => {
+            console.log('error getting shopping list items: ', error);
+        }) // end .catch, end axios.get
+    } // end getShoppingList const
 
 
     const purchaseItem = () => {
@@ -21,9 +35,6 @@ function App() {
             console.log('error purchasing item ', error);
         })
     } 
-
-
-
 
 
     // remove an item from the shopping list
