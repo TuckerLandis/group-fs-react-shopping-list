@@ -28,7 +28,6 @@ function App() {
     } // end getShoppingList const
 
 
-<<<<<<< HEAD
     // ⬇ Function to add a new item to the list
     // ⬇ Will be called from the ShoppingForm
     const addToList = (newFoodItem) => {
@@ -42,7 +41,6 @@ function App() {
         console.log('error adding item', err)
         })
     }
-=======
     const purchaseItem = () => {
 
         Axios.put(`/list/${itemId}`)
@@ -53,7 +51,6 @@ function App() {
         })
     } 
 
->>>>>>> master
 
     // remove an item from the shopping list
     const removeItem = (itemId) => {
