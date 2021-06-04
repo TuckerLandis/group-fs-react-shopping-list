@@ -60,7 +60,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
-                <ResetClear />
+                <ResetClear removeItem={removeItem}/>
             </main>
         </div>
     );
