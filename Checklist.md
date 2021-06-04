@@ -26,7 +26,7 @@ To Dos:
 
 - [ ] Full stack DELETE route
     - [ ] AXIOS in react component
-    - [ ] server route
+    - [x] server route
     - [ ] Clear Button: Removes all items from the list, DOM, databse, --> net zero!
 
 

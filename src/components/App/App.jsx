@@ -1,10 +1,16 @@
 import React from 'react';
 
+
 import Header from '../Header/Header.jsx';
+
+import axios from 'axios';
+import Header from '../Header/Header.jsx'
+
 import './App.css';
 
 
 function App() {
+
 
     const purchaseItem = () => {
 
@@ -15,6 +21,26 @@ function App() {
             console.log('error purchasing item ', error);
         })
     } 
+
+
+
+
+
+    // remove an item from the shopping list
+    const removeItem = (itemId) => {
+        console.log('Removing item:', itemId);
+        // axios DELETE request
+        axios.delete(`/list/${itemId}`)
+            .then(response => {
+                console.log('Item deleted');
+                // Call a get list below here
+            })
+            .catch(error => {
+                alert('Error deleting item');
+                console.log(error);
+            });
+    }
+
 
 
     return (
