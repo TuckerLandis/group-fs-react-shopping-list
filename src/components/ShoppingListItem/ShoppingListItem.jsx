@@ -1,13 +1,23 @@
 import './ShoppingListItem.css'
 function ShoppingListItem(props) {
 
+    const purchaseHandler = (id) => {
+        console.log('Clicked Purchase!');
+        props.purchaseItem(id);
+    }
+
+    const removeHandler = (id) => {
+        console.log('Clicked remove!');
+        props.removeItem(id);
+    }
+
 
     const ifPurchased = (props) => {
         if (!props.purchased) {
             return (<>
-                    <button onClick={props.purchaseItem}> Purchase </button>
+                    <button onClick={() => purchaseHandler(props.id)}> Purchase </button>
                         <p>  </p>
-                     <button onClick={props.deleteItem}> Remove </button>
+                     <button onClick={() => removeHandler(props.id)}> Remove </button>
                  </>
             )
         } else {
@@ -17,6 +27,7 @@ function ShoppingListItem(props) {
         }
     }
 
+    // console.log('Props in ShoppingListItem are:', props);
     return (
         <div className="ShoppingListItem">
             <p>{props.name}</p>
