@@ -19,8 +19,8 @@ To Dos:
             - [ ] Add to list button
 
 - [ ] Full stack PUT route
-    - [  ] AXIOS in react component
-    - [  ] server route
+    - [ ] AXIOS in react component
+    - [x] server route
     - [ ] marks items as purchased
         - [ ] Conditional rendering: remove purchased and delete buttons, display "Purchased" somehow
 
