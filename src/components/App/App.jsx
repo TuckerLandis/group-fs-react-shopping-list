@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../Header/Header';
 import './App.css';
+import ShoppingList from '../ShoppingList/ShoppingList';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
+                <ShoppingList />
             </main>
         </div>
     );
