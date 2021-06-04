@@ -26,8 +26,25 @@ function ResetClear ({shoppingList, removeItem, resetPurchased}) {
     const handleClear = () => {
         console.log('Clicked!');
         // iterate over each item in list and make a delete request for each one individually
-        shoppingList.forEach(item => removeItem(item.id));
-    }
+        swal({
+            title: "Are You Sure?",
+            text: "This will clear your entire shopping list. This cannot be undone",
+            icon: "warning",
+            dangerMode: true,
+            buttons: ["Cancel", "Yes, I am sure."]
+        }).then( (willDelete) => {
+            if (willDelete) {
+                swal("Your list has been cleared!",{
+                    icon: "success",
+                })
+                // iterate over each item in list and make a delete request for each one individually
+                shoppingList.forEach(item => removeItem(item.id));
+        } else {
+            swal("Your list is safe!");
+        }
+    })
+
+}
 
     return (
         <>
