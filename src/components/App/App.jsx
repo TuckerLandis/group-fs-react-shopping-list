@@ -76,7 +76,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
-                <ResetClear removeItem={removeItem}/>
+                <ResetClear removeItem={removeItem} shoppingList={shoppingList}/>
                 <ShoppingForm addToList={addToList} />
             </main>
         </div>

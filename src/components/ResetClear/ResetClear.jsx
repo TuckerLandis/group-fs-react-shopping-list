@@ -2,7 +2,8 @@ function ResetClear ({shoppingList, removeItem}) {
 
     const handleClear = () => {
         console.log('Clicked!');
-        shoppingList.forEach(item => removeItem(item))
+        console.log(shoppingList);
+        // shoppingList.forEach(item => removeItem(item))
     }
     return (
         <>
