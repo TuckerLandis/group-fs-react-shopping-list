@@ -26,7 +26,7 @@ function ShoppingForm({addToList}){
 
     return(
         <>
-        <h2 className="ShoppingFormHeader">Add A Item</h2>
+        <h2 className="ShoppingFormHeader">Add An Item</h2>
         <form onSubmit={handleSave} className="ShoppingForm">
             <label>Item</label>
             <input 
