@@ -26,9 +26,7 @@ function App() {
         }) // end .catch, end axios.get
     } // end getShoppingList const
 
-
-<<<<<<< HEAD
-    // ⬇ Function to add a new item to the list
+// ⬇ Function to add a new item to the list
     // ⬇ Will be called from the ShoppingForm
     const addToList = (newFoodItem) => {
         axios.post('/list', {newFoodItem})
@@ -41,11 +39,8 @@ function App() {
         console.log('error adding item', err)
         })
     }
-    const purchaseItem = () => {
-=======
-    const purchaseItem = (itemId) => {
->>>>>>> master
 
+    const purchaseItem = (itemId) => {
         Axios.put(`/list/${itemId}`)
         .then(response => {
             //get list

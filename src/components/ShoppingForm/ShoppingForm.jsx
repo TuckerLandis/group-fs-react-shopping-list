@@ -26,7 +26,7 @@ function ShoppingForm(addToList){
     return(
         <>
         <h2>Add A Item</h2>
-        <form obSubmit={handleSave}>
+        <form onSubmit={handleSave}>
             <label>Item</label>
             <input 
                 onChange={(event) => newShoppingItem(event.target.value)}
