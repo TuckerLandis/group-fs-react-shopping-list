@@ -18,5 +18,20 @@ router.get('/', (req, res) => {
         res.sendStatus(500);
     }) // end .catch, end pool.query
 }) // end router.get
+// DELETE
+router.delete('/:id', (req, res) => {
+    // hold id for sanitizing
+    const id = req.params.id;
+    const queryText = `DELETE FROM "list" WHERE "id" = $1`;
+
+    pool.query(queryText, [id])
+        .then(result => {
+            console.log('Deleted an item from the database', id);
+            res.sendStatus(200);
+        })
+        .catch(error => {
+            console.log(`Error making database DELETE query ${queryText}`, error);  
+        });
+})
 
 module.exports = router;
