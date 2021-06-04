@@ -17,9 +17,9 @@ function ShoppingListItem(props) {
     const ifPurchased = (props) => {
         if (!props.purchased) {
             return (<>
-                    <button onClick={() => purchaseHandler(props.id)}> Purchase </button>
+                    <button className="btn btn-success" onClick={() => purchaseHandler(props.id)}> Purchase </button>
                         <p>  </p>
-                     <button onClick={() => removeHandler(props.id)}> Remove </button>
+                     <button className="btn btn-danger" onClick={() => removeHandler(props.id)}> Remove </button>
                  </>
             )
         } else {

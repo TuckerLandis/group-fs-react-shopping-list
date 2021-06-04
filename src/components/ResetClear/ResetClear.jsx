@@ -14,8 +14,8 @@ function ResetClear ({shoppingList, removeItem, resetPurchased}) {
 
     return (
         <>
-            <button onClick={handleReset}>Reset</button>
-            <button onClick={handleClear}>Clear List</button>
+            <button className="btn btn-warning" onClick={handleReset}>Reset</button>
+            <button className="btn btn-danger" onClick={handleClear}>Clear List</button>
         </>
     )
 }
