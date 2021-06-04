@@ -54,6 +54,15 @@ function App() {
         })
     } 
 
+    const resetPurchased = (itemId) => {
+        Axios.put(`/list/reset/${itemId}`)
+        .then(response => {
+            getShoppingList();
+        }).catch(error => {
+            console.log('error purchasing item ', error);
+        })
+    } 
+
 
     // remove an item from the shopping list
     const removeItem = (itemId) => {
