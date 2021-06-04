@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
 // GET
 
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "list" ORDER BY "name" DESC;`;
+    const queryText = `SELECT * FROM "list" ORDER BY ("name", "purchased") DESC;`;
     pool.query(queryText)
     .then(response => {
         console.log('Things we got from db: ', response.rows);
