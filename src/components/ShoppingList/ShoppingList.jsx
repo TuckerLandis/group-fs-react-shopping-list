@@ -3,7 +3,7 @@ import ShoppingListItem from '../ShoppingListItem/ShoppingListItem';
 function ShoppingList({shoppingList, removeItem, purchaseItem}) {
     return (
         <>
-            <h2 className="ShoppingListHeader">Shopping List</h2>
+            
             <div className="ShoppingList">
                 {shoppingList.map(item =>
                     <ShoppingListItem key={item.id} name={item.name} quantity={item.quantity} unit={item.unit} removeItem={removeItem} purchaseItem={purchaseItem} id={item.id}/>)}

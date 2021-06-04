@@ -86,10 +86,10 @@ function App() {
         <div className="App">
             <Header />
             <main>
-                <p>Under Construction...</p>
-                <ResetClear removeItem={removeItem} shoppingList={shoppingList} resetPurchased={resetPurchased}/>
-                <ShoppingList shoppingList={shoppingList} removeItem={removeItem} purchaseItem={purchaseItem}/>
                 <ShoppingForm addToList={addToList} />
+                <h2>Shopping List</h2>
+                <ResetClear removeItem={removeItem} shoppingList={shoppingList} resetPurchased={resetPurchased}/>
+                <ShoppingList shoppingList={shoppingList}/>
             </main>
         </div>
     );
