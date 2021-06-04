@@ -5,7 +5,8 @@ function ShoppingList({shoppingList}) {
         <>
             <h2>Shopping List</h2>
             <div>
-                <ShoppingListItem />
+                {shoppingList.map(item =>
+                    <ShoppingListItem key={item.id} name={item.name} quantity={item.quantity} unit={item.unit}/>)}
             </div>
         </>
     ) // end return
