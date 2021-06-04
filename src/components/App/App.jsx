@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../Header/Header.jsx';
+import Header from '../Header/Header.jsx'
+import ResetClear from '../ResetClear/ResetClear';
 import './App.css';
 import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
 import ShoppingList from '../ShoppingList/ShoppingList.jsx';
+
+
 
 
 function App() {
@@ -43,9 +46,18 @@ function App() {
     }
 
     const purchaseItem = (itemId) => {
-        Axios.put(`/list/${itemId}`)
+        axios.put(`/list/${itemId}`)
         .then(response => {
-            //get list
+            getShoppingList();
+        }).catch(error => {
+            console.log('error purchasing item ', error);
+        })
+    } 
+
+    const resetPurchased = (itemId) => {
+        axios.put(`/list/reset/${itemId}`)
+        .then(response => {
+            getShoppingList();
         }).catch(error => {
             console.log('error purchasing item ', error);
         })
@@ -59,6 +71,7 @@ function App() {
         axios.delete(`/list/${itemId}`)
             .then(response => {
                 console.log('Item deleted');
+                getShoppingList();
                 // Call a get list below here
             })
             .catch(error => {
@@ -74,6 +87,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
+                <ResetClear removeItem={removeItem} shoppingList={shoppingList} resetPurchased={resetPurchased}/>
                 <ShoppingList shoppingList={shoppingList}/>
                 <ShoppingForm addToList={addToList} />
             </main>
