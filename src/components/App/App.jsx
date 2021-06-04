@@ -17,7 +17,7 @@ function App() {
         .then( response => {
         // ⬇ Calls function to get the updated shopping list from the database
         getShoppingList();
-        //TODO - Clear Inputs
+        //TODO - Clear Inputs for setShoppingItem, setShoppingQuantity, setShoppingUnit
         })
         .catch( err => {
         console.log('error adding item', err)
