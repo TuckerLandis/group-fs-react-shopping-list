@@ -5,6 +5,7 @@ import Header from '../Header/Header.jsx'
 import ResetClear from '../ResetClear/ResetClear';
 import './App.css';
 import ShoppingForm from '../ShoppingForm/ShoppingForm.jsx';
+import ShoppingList from '../ShoppingList/ShoppingList.jsx';
 
 
 
