@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from '../Header/Header.jsx'
 import './App.css';
 
+import ResetClear from '../ResetClear/ResetClear';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
+                <ResetClear />
             </main>
         </div>
     );
