@@ -3,6 +3,7 @@ function ResetClear ({shoppingList, removeItem, resetPurchased}) {
     const handleReset = () => {
         console.log('Clicked!');
         // iterate over each item in list and make a delete request for each one individually
+        
         shoppingList.forEach(item => resetPurchased(item.id));
     }
     // function for the clear button event listener

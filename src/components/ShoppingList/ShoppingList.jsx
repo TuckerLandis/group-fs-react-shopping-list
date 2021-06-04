@@ -13,3 +13,4 @@ function ShoppingList({shoppingList, removeItem, purchaseItem}) {
 } // end ShoppingList fn
 
 export default ShoppingList; // export to App
+
