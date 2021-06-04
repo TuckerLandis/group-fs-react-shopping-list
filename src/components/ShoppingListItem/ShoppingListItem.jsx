@@ -6,6 +6,7 @@ function ShoppingListItem(props) {
     const purchaseHandler = (id) => {
         console.log('Clicked Purchase!');
         props.purchaseItem(id);
+        
     }
 
     const removeHandler = (id) => {
@@ -13,8 +14,8 @@ function ShoppingListItem(props) {
         props.removeItem(id);
     }
 
-
-    const ifPurchased = (props) => {
+    
+    const ifPurchased = () => {
         if (!props.purchased) {
             return (<>
                     <button onClick={() => purchaseHandler(props.id)}> Purchase </button>
@@ -28,7 +29,7 @@ function ShoppingListItem(props) {
             )
         }
     }
-
+    // console.log('Checking props purchased', props.purchased);
     // console.log('Props in ShoppingListItem are:', props);
     return (
         <div className="ShoppingListItem">
@@ -36,7 +37,7 @@ function ShoppingListItem(props) {
             <p>  </p>
             <p>{props.quantity} {props.unit}</p>
             <p>  </p>
-            {ifPurchased(props)}
+            {ifPurchased()}
         </div>
     )
 }
