@@ -48,14 +48,14 @@ function App() {
     const purchaseItem = (itemId) => {
         Axios.put(`/list/${itemId}`)
         .then(response => {
-            //get list
+            getShoppingList();
         }).catch(error => {
             console.log('error purchasing item ', error);
         })
     } 
 
     const resetPurchased = (itemId) => {
-        Axios.put(`/list/reset/${itemId}`)
+        axios.put(`/list/reset/${itemId}`)
         .then(response => {
             getShoppingList();
         }).catch(error => {
@@ -87,7 +87,7 @@ function App() {
             <Header />
             <main>
                 <p>Under Construction...</p>
-                <ResetClear removeItem={removeItem} shoppingList={shoppingList}/>
+                <ResetClear removeItem={removeItem} shoppingList={shoppingList} resetPurchased={resetPurchased}/>
                 <ShoppingList shoppingList={shoppingList}/>
                 <ShoppingForm addToList={addToList} />
             </main>
