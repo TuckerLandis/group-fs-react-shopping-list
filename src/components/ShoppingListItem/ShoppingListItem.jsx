@@ -1,5 +1,5 @@
 import './ShoppingListItem.css'
-import swal from '@sweetalert/with-react';
+import Swal from 'sweetalert2';
 
 function ShoppingListItem(props) {
 
