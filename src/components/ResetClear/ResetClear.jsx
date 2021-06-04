@@ -2,8 +2,8 @@ function ResetClear ({shoppingList, removeItem}) {
 
     const handleClear = () => {
         console.log('Clicked!');
-        console.log(shoppingList);
-        // shoppingList.forEach(item => removeItem(item))
+        // iterate over each item in list and make a delete request for each one individually
+        shoppingList.forEach(item => removeItem(item.id));
     }
     return (
         <>

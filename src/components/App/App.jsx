@@ -62,6 +62,7 @@ function App() {
         axios.delete(`/list/${itemId}`)
             .then(response => {
                 console.log('Item deleted');
+                getShoppingList();
                 // Call a get list below here
             })
             .catch(error => {
