@@ -1,6 +1,14 @@
+import SweetAlert from 'sweetalert2-react';
+
 function ResetClear ({shoppingList, removeItem, resetPurchased}) {
     // function for the reset button event listener
     const handleReset = () => {
+        sweetAlert({
+            title: "Are You Sure?",
+            text: "This will mark all your items as not purchased. This cannot be undone",
+            icon: warning,
+            dangerMode: true,
+        })
         console.log('Clicked!');
         // iterate over each item in list and make a delete request for each one individually
         shoppingList.forEach(item => resetPurchased(item.id));
